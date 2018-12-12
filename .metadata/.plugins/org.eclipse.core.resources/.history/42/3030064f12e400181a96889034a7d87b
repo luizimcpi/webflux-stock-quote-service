@@ -1,0 +1,15 @@
+package com.devlhse.springreactiveapi.model;
+
+import java.util.Map;
+import java.util.UUID;
+
+import org.springframework.data.annotation.Id;
+
+public class Owner {
+
+	@Id
+    private String id = UUID.randomUUID().toString();
+	private String carId;
+    private String model;
+    private Map<String, Object> data;
+}

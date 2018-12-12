@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="com.devlhse.springreactiveapi.model.Car.CarBuilder"/>
+<fullyQualifiedTypeName name="com.devlhse.springreactiveapi.service.FluxOwnerService"/>
+<fullyQualifiedTypeName name="com.devlhse.springreactiveapi.repository.OwnerRepository"/>
+<fullyQualifiedTypeName name="reactor.core.publisher.Mono"/>
+<fullyQualifiedTypeName name="com.devlhse.springreactiveapi.model.Owner"/>
+<fullyQualifiedTypeName name="org.springframework.web.reactive.function.server.ServerResponse"/>
+<fullyQualifiedTypeName name="com.devlhse.springreactiveapi.exception.CarNotFoundException"/>
+</qualifiedTypeNameHistroy>

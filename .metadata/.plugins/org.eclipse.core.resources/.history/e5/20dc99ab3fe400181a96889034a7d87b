@@ -1,0 +1,5 @@
+package com.devlhse.springreactiveapi.endpoint;
+
+public class OwnerExceptionController {
+
+}

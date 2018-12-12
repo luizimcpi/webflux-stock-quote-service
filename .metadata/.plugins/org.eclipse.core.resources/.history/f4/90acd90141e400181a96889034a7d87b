@@ -1,0 +1,19 @@
+package com.devlhse.springreactiveapi.endpoint;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.reactive.function.server.ServerResponse;
+
+import com.devlhse.springreactiveapi.exception.CarNotFoundException;
+
+import reactor.core.publisher.Mono;
+
+@ControllerAdvice
+public class OwnerExceptionController {
+	
+	@ExceptionHandler(CarNotFoundException.class)
+	public Mono<ServerResponse> handleCarNotFoundExceptionException() {
+		Mono<String> message = Mono.just("Car not Found");
+		return ServerResponse.status(204).body(message, String.class);
+	}
+}

@@ -1,0 +1,63 @@
+package com.devlhse.springreactiveapi.model;
+
+import java.util.Map;
+import java.util.UUID;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document
+public class Car {
+
+    public Car() {
+    }
+
+    public Car(String id, String ownerId, String model, Map<String, Object> data) {
+        this.id = id;
+        this.ownerId = ownerId;
+        this.model = model;
+        this.data = data;
+    }
+
+    @Id
+    private String id = UUID.randomUUID().toString();
+    private String ownerId;
+    private String model;
+    private Map<String, Object> data;
+    
+    public static Car.CarBuilder builder(){
+        return aCar();
+    }
+
+    public static final class CarBuilder {
+        private Car car;
+
+        private CarBuilder() {
+            car = new Car();
+        }
+
+        public static CarBuilder aCar() {
+            return new CarBuilder();
+        }
+
+        public CarBuilder showNps(Boolean showNps) {
+            settingsRequest.setShowNps(showNps);
+            return this;
+        }
+
+        public SettingsRequestBuilder phoneChanged(Boolean phoneChanged) {
+            settingsRequest.setPhoneChanged(phoneChanged);
+            return this;
+        }
+
+        public SettingsRequestBuilder customPayload(Map<String, Object> customPayload) {
+            settingsRequest.setCustomPayload(customPayload);
+            return this;
+        }
+
+        public SettingsRequest build() {
+            return settingsRequest;
+        }
+    }
+}

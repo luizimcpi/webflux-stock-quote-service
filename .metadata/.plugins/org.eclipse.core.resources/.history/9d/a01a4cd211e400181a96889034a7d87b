@@ -1,0 +1,5 @@
+package com.devlhse.springreactiveapi.model;
+
+public class Owner {
+
+}

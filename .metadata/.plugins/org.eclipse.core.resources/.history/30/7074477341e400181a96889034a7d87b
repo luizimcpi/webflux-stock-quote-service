@@ -1,0 +1,7 @@
+package com.devlhse.springreactiveapi.exception;
+
+public class OwnerNotFoundException  extends RuntimeException {
+    public OwnerNotFoundException(String errorMessage, Throwable err) {
+        super(errorMessage, err);
+    }
+}
